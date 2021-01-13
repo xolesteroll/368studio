@@ -1,0 +1,74 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy";
+  color: #ffffff;
+  overflow: hidden;
+  background-color: #000000;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 12.5px;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.down-arrow{
+  position: absolute;
+  bottom: 100px;
+}
+.global-subtitle {
+  font-size: 24px;
+  color: $blue;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.global-title{
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+.global-text{
+  font-size: 16px;
+  font-weight: 400;
+}
+.global-shadowtitle{
+  font-size: 133px;
+  line-height: 125px;
+  color: rgba(255,255,255,0.1);
+  position: absolute;
+}
+.invisible{
+  display: none;
+}
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}

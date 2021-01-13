@@ -1,0 +1,100 @@
+@media (max-width: 1050px) {
+  .main__title {
+    font-size: 90px;
+    letter-spacing: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .main__form {
+    margin-left: 15%;
+  }
+
+  .main__footer-copy__text span {
+    font-size: 15px;
+    letter-spacing: 15px;
+  }
+}
+
+@media (max-width: 670px) {
+  .main__title {
+    letter-spacing: 25px;
+  }
+  input[name="login"],
+  input[name="password"],
+  .today-number,
+  .main__form-btns {
+    margin: 0 auto;
+  }
+  input[name="password"] {
+    margin-top: 45px;
+  }
+  .today-number {
+    margin-bottom: 45px;
+  }
+  .main__form {
+    margin-left: 0;
+  }
+  .main__footer-copy__text {
+    display: none;
+  }
+  .main__footer-copy__text--mobile {
+    display: block;
+    max-width: 365px;
+    span {
+      line-height: 25px;
+      letter-spacing: 5px;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .main__title {
+    letter-spacing: 10px;
+    font-size: 60px;
+  }
+  .today-number {
+    margin-bottom: 120px;
+  }
+}
+
+@media (max-width: 380px) {
+  .main__title {
+    letter-spacing: 5px;
+  }
+  .main__footer-copy__text--mobile {
+    max-width: 205px;
+  }
+  .main__title-wrapper {
+    margin-bottom: 10px;
+  }
+  .main__title {
+    padding-bottom: 20px;
+  }
+  .today-number {
+    margin-bottom: 25px;
+    max-width: 115px;
+    min-height: 75px;
+    font-size: 70px;
+  }
+  input[name="password"] {
+    margin-top: 25px;
+  }
+  .modal-window {
+    position: absolute;
+    right: auto; 
+    bottom: auto;
+    width: 250px;
+    min-height: 130px;
+    padding: 15px 22px;
+    background-color: #F0E6E6;
+    left: 50%;
+    top: 57%;
+    transform: translate(-50%);
+}
+}
+
+// @media(max-height: 800px) {
+//     .main__title {
+//         font-size: 120px;
+//     }
+// }
