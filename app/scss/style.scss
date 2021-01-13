@@ -23,6 +23,7 @@
   &__menu {
     transition: all 0.5s;
     position: absolute;
+    z-index: 10;
     right: 0;
     top: 0;
     max-width: 475px;
@@ -64,9 +65,8 @@
         color: #ffffff;
         font-weight: 700;
       }
-      
     }
-    &-num{
+    &-num {
       margin-left: 14px;
     }
     &-line {
@@ -84,12 +84,9 @@
       width: 3px;
       height: 3px;
       border-radius: 50%;
-      background-image: url(../images/icons/round-dot.png);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-color: #ffffff;
       display: none;
-      &.active{
+      &.active {
         display: block;
       }
     }
@@ -138,6 +135,7 @@
     align-items: center;
     height: 100vh;
     transition: all 0.5s;
+    position: relative;
   }
   &__info {
     max-width: 500px;
@@ -164,6 +162,8 @@
       text-decoration: none;
       text-transform: uppercase;
       color: #ffffff;
+      position: relative;
+      z-index: 5;
     }
     &-play {
       position: relative;
@@ -231,6 +231,24 @@
         fill: rgba(0, 0, 0, 0.6);
       }
     }
+  }
+  .white-circle {
+    position: absolute;
+    right: -20%;
+    bottom: 9%;
+    width: 475px;
+    height: 475px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.01);
+  }
+  .empty-circle {
+    position: absolute;
+    right: 3%;
+    top: 27%;
+    width: 244px;
+    height: 244px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 

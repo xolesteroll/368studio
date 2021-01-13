@@ -6,43 +6,41 @@ const container = document.querySelector(".container");
 const shadowTitles = document.querySelectorAll(".global-shadowtitle");
 const arrowDown = document.querySelectorAll(".down-arrow");
 const headerInner = document.querySelector(".header__inner");
+const mainInnerWidth = window.getComputedStyle(mainInner).width;
+const headerInnerWidth = window.getComputedStyle(headerInner).width;
 
-console.log(window.getComputedStyle(headerInner).marginRight);
+
 
 const startInit = () => {
-  mainInner.style.width = `
-    ${window.getComputedStyle(mainInner).width}
-    `;
   shadowTitles.forEach((st) => {
     st.textContent = st.parentElement.textContent;
   });
   arrowDown.forEach((arrow) => {
-    if (parseFloat(window.getComputedStyle(headerInner).marginRight) !== 0) {
-      arrow.style.right = window.getComputedStyle(headerInner).marginRight;
-    } else {
-      arrow.style.right = "30px";
-    }
+    arrow.style.right = `
+       ${
+         -(parseFloat(headerInnerWidth) -
+         parseFloat(mainInnerWidth)) / 2 +
+         "px"
+       }
+    `;
   });
 };
 const menuOut = () => {
   menuBox.classList.remove("in");
   menuBox.classList.add("out");
   menuBtn.style.cssText = "position: static;";
-  mainInner.style.width = `100%
-    `;
+  mainInner.style.paddingRight = "0";
 };
 
 const menuIn = () => {
-  const containerMarginRight = window.getComputedStyle(container).marginRight;
   menuBox.classList.remove("out");
   menuBox.classList.add("in");
   menuBtn.style.cssText = "position: relative; z-index: 9999;";
-  mainInner.style.width = `
+  mainInner.style.paddingRight = `
     ${
-      parseFloat(window.getComputedStyle(mainInner).width) -
-      parseFloat(window.getComputedStyle(menuBox).width) +
-      parseFloat(containerMarginRight) +
-      "px"
+      parseFloat((window.getComputedStyle(menuBox).width)) - 
+      parseFloat((window.getComputedStyle(menuBox).width)) / 3 +
+      'px'
     }
     `;
 };
@@ -56,7 +54,6 @@ menuBtn.addEventListener("click", () => {
 });
 
 menuItems.forEach((li) => {
-  console.log(li);
   li.addEventListener("mouseenter", () => {
     li.querySelector(".header__menu-link").classList.add("active");
     li.querySelector(".header__menu-line").classList.add("active");
