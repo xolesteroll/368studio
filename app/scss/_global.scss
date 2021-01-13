@@ -13,7 +13,7 @@ body {
   padding: 0;
   font-family: "Gilroy";
   color: #ffffff;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #000000;
 }
 .container {
@@ -35,10 +35,10 @@ li {
   padding: 0;
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
 }
-.down-arrow{
+.down-arrow {
   position: absolute;
   bottom: 100px;
 }
@@ -48,23 +48,42 @@ a{
   font-weight: 700;
   text-transform: uppercase;
 }
-.global-title{
+.global-title {
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
 }
-.global-text{
+.global-text {
   font-size: 16px;
   font-weight: 400;
 }
-.global-shadowtitle{
+.global-shadowtitle {
   font-size: 133px;
   line-height: 125px;
-  color: rgba(255,255,255,0.1);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.1);
   position: absolute;
 }
-.invisible{
+.global__section-number {
+  position: absolute;
+  right: 0;
+  top: 18%;
+  display: flex;
+  align-items: center;
+  span {
+    font-size: 27px;
+    color: #ffffff;
+    font-weight: 700; 
+    padding-right: 35px;
+  }
+  .section-number__line {
+    width: 270px;
+    height: 1px;
+    background-color: #fff;
+  }
+}
+.invisible {
   display: none;
 }
 button {

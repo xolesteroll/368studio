@@ -252,4 +252,114 @@
   }
 }
 
+.mission {
+  position: relative;
+  height: 100vh;
+  padding-top: 125px;
+  &__inner {
+    margin-bottom: 150px;
+  }
+  &__title-box {
+    max-width: 450px;
+  }
+  &__shadowtitle {
+    top: -58%;
+    left: -67%;
+  }
+  &__bg-block {
+    position: absolute;
+    &.stars-bg {
+      width: 490px;
+      height: 404px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      &.yellow-top {
+        top: 0%;
+        left: 41%;
+    z-index: -1;
+
+      }
+      &.yellow-bottom {
+        left: 35%;
+        bottom: 13%;
+    z-index: -1;
+
+      }
+      &.blue-left {
+        bottom: 15%;
+        left: -9%;
+    z-index: -1;
+
+      }
+      &.blue-right {
+        right: 0;
+        top: 0;
+    z-index: -1;
+
+      }
+    }
+    &.crowd-bg {
+      width: 380px;
+      height: 285px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      top: 2%;
+      left: 25%;
+    z-index: -1;
+
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      position: relative;
+      z-index: 9999;
+      max-width: 263px;
+      width: 100%;
+      min-height: 263px;
+      padding: 46px 46px 37px 42px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover{
+      background-color: rgba(255, 255, 255, 0.05);
+      }
+    }
+    &-title {
+      color: $blue;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 52px;
+    }
+    &-img {
+      position: absolute;
+      top: -10%;
+      right: -6%;
+    }
+    &-line {
+      width: 127px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.1);
+      position: absolute;
+      top: 33%;
+      left: 0;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -2px;
+        background-color: $blue;
+        width: 4px;
+        height: 4px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
 @import "media";

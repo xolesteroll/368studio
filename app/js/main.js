@@ -4,25 +4,26 @@ const menuItems = document.querySelectorAll(".header__menu-item");
 const mainInner = document.querySelector(".main__inner");
 const container = document.querySelector(".container");
 const shadowTitles = document.querySelectorAll(".global-shadowtitle");
-const arrowDown = document.querySelectorAll(".down-arrow");
+const arrowDown = document.querySelector(".main__down-arrow");
+const arrowsDown = document.querySelectorAll(".down-arrow");
 const headerInner = document.querySelector(".header__inner");
 const mainInnerWidth = window.getComputedStyle(mainInner).width;
 const headerInnerWidth = window.getComputedStyle(headerInner).width;
-
-
 
 const startInit = () => {
   shadowTitles.forEach((st) => {
     st.textContent = st.parentElement.textContent;
   });
-  arrowDown.forEach((arrow) => {
-    arrow.style.right = `
-       ${
-         -(parseFloat(headerInnerWidth) -
-         parseFloat(mainInnerWidth)) / 2 +
-         "px"
-       }
-    `;
+  arrowsDown.forEach((arrow, i) => {
+    if (i === 0) {
+      arrow.style.right = `
+      ${-(parseFloat(headerInnerWidth) - parseFloat(mainInnerWidth)) / 2 + "px"}
+      `;
+    }else {
+      arrow.style.right = `
+        ${(window.getComputedStyle(headerInner).marginRight)}
+      `;
+    }
   });
 };
 const menuOut = () => {
@@ -38,9 +39,9 @@ const menuIn = () => {
   menuBtn.style.cssText = "position: relative; z-index: 9999;";
   mainInner.style.paddingRight = `
     ${
-      parseFloat((window.getComputedStyle(menuBox).width)) - 
-      parseFloat((window.getComputedStyle(menuBox).width)) / 3 +
-      'px'
+      parseFloat(window.getComputedStyle(menuBox).width) -
+      parseFloat(window.getComputedStyle(menuBox).width) / 3 +
+      "px"
     }
     `;
 };
