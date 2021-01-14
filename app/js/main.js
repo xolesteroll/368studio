@@ -9,6 +9,7 @@ const arrowsDown = document.querySelectorAll(".down-arrow");
 const headerInner = document.querySelector(".header__inner");
 const mainInnerWidth = window.getComputedStyle(mainInner).width;
 const headerInnerWidth = window.getComputedStyle(headerInner).width;
+const casesItem = document.querySelector('cases__item');
 
 const startInit = () => {
   shadowTitles.forEach((st) => {
