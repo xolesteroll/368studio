@@ -14,7 +14,11 @@ body {
   font-family: "Gilroy";
   color: #ffffff;
   overflow-x: hidden;
+  
+}
+.wrapper{
   background-color: #000000;
+  height: 100%;
 }
 .container {
   max-width: 1200px;
@@ -47,6 +51,7 @@ a {
   color: $blue;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 8px;
 }
 .global-title {
   font-size: 48px;
@@ -71,6 +76,7 @@ a {
   top: 18%;
   display: flex;
   align-items: center;
+  z-index: 2;
   span {
     font-size: 27px;
     color: #ffffff;
