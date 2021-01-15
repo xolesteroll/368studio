@@ -35,7 +35,12 @@ function images() {
 }
 
 function scripts() {
-  return src(["node_modules/jquery/dist/jquery.js", "app/js/main.js"])
+  return src([
+    "node_modules/jquery/dist/jquery.js",
+    "node_modules/slick-carousel/slick/slick.js",
+    "app/js/slider.js",
+    "app/js/main.js"
+  ])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -44,6 +49,7 @@ function scripts() {
 
 function styles() {
   return src([
+    "node_modules/slick-carousel/slick/slick.css",
     "app/scss/style.scss",
     "node_modules/normalize.css/normalize.css"
   ])

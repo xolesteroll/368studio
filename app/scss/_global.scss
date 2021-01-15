@@ -17,7 +17,7 @@ body {
   
 }
 .wrapper{
-  background-color: #000000;
+  background-color: #050f10;
   height: 100%;
 }
 .container {
@@ -53,15 +53,19 @@ a {
   text-transform: uppercase;
   margin-bottom: 8px;
 }
+.global__title-box{
+  position: relative;
+  z-index: 1;
+}
 .global-title {
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
-  position: relative;
 }
 .global-text {
   font-size: 16px;
   font-weight: 400;
+  color: rgba(#ffffff, 0.5);
 }
 .global-shadowtitle {
   font-size: 133px;
@@ -69,6 +73,7 @@ a {
   font-weight: 700;
   color: rgba(255, 255, 255, 0.1);
   position: absolute;
+  z-index: -1;
 }
 .global__section-number {
   position: absolute;
