@@ -12,7 +12,7 @@
     align-items: center;
     max-width: 1345px;
     margin: 0 auto;
-    padding: 15px;
+    padding: 15px 25px;
   }
   &__action-box {
     max-width: 210px;
@@ -28,7 +28,7 @@
     top: 0;
     max-width: 475px;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,6 +113,7 @@
     line-height: 8px;
     letter-spacing: 4px;
     text-align: center;
+    z-index: 9999;
     cursor: pointer;
     div:first-child {
       margin-right: -3px;
@@ -125,7 +126,7 @@
   }
 }
 .main {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../images/main-bg.png);
   background-size: cover;
   background-position: center;
@@ -134,7 +135,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     transition: all 0.5s;
     position: relative;
   }
@@ -150,6 +151,10 @@
       width: 1325px;
       left: -130%;
       top: -71%;
+    }
+    &-text{
+      font-size: 16px;
+      color: #ffffff;
     }
   }
   &__showreel {
@@ -171,11 +176,15 @@
       width: 71px;
       height: 71px;
       border-radius: 50%;
-      background-image: url(../images/icons/play-icon.png);
-      background-size: auto;
-      background-position: 55%;
-      background-repeat: no-repeat;
       background-color: rgba(255, 255, 255, 0.1);
+      &__img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+        width: 10px;
+        height: 11px;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -255,8 +264,9 @@
 
 .mission {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 125px;
+  z-index: 1;
   &__inner {
     margin-bottom: 150px;
   }
@@ -275,25 +285,22 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      z-index: -1;
       &.yellow-top {
         top: 0%;
         left: 41%;
-        z-index: -1;
       }
       &.yellow-bottom {
         left: 35%;
-        bottom: 13%;
-        z-index: -1;
+        bottom: -17%;
       }
       &.blue-left {
         bottom: 15%;
         left: -9%;
-        z-index: -1;
       }
       &.blue-right {
         right: 0;
         top: 0;
-        z-index: -1;
       }
     }
     &.crowd-bg {
@@ -360,13 +367,14 @@
 
 .services {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #0c1516;
   overflow: hidden;
   opacity: 0.8;
   padding: 80px 0;
   border-top-left-radius: 70% 367px;
   border-top-right-radius: 70% 367px;
+  z-index: 1;
   &__title-box {
     text-align: center;
     margin-bottom: 80px;
@@ -480,7 +488,7 @@
 }
 
 .cases {
-  height: 100vh;
+  min-height: 100vh;
   padding: 100px 0;
   background-color: rgba(#050f10, 0.5);
   position: relative;
@@ -561,7 +569,7 @@
   }
   &__vertical-line {
     position: absolute;
-    height: 100vh;
+    min-height: 100vh;
     width: 1px;
     background-color: rgba(255, 255, 255, 0.03);
     top: 0;
