@@ -50,6 +50,7 @@ function scripts() {
 function styles() {
   return src([
     "node_modules/slick-carousel/slick/slick.css",
+    "node_modules/animate.css/animate.css",
     "app/scss/style.scss",
     "node_modules/normalize.css/normalize.css"
   ])

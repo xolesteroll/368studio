@@ -46,6 +46,9 @@ a {
   position: absolute;
   bottom: 100px;
 }
+.animate__animated{
+  --animate-duration: 5s;
+}
 .global-subtitle {
   font-size: 24px;
   color: $blue;

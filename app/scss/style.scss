@@ -131,6 +131,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  // background-attachment: fixed;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -152,7 +153,7 @@
       left: -130%;
       top: -71%;
     }
-    &-text{
+    &-text {
       font-size: 16px;
       color: #ffffff;
     }
@@ -177,7 +178,7 @@
       height: 71px;
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0.1);
-      &__img{
+      &__img {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -327,6 +328,7 @@
       border-radius: 10px;
       background-color: rgba(255, 255, 255, 0.1);
       transition: all 0.3s;
+      margin: 0 15px;
       cursor: pointer;
       &:hover {
         background-color: rgba(255, 255, 255, 0.05);
@@ -372,8 +374,8 @@
   overflow: hidden;
   opacity: 0.8;
   padding: 80px 0;
-  border-top-left-radius: 70% 367px;
-  border-top-right-radius: 70% 367px;
+  border-top-left-radius: 473% 285%;
+  border-top-right-radius: 473% 285%;
   z-index: 1;
   &__title-box {
     text-align: center;
@@ -395,11 +397,24 @@
     max-width: 188px;
     min-height: 365px;
     display: flex;
-    & + .services__item {
-      margin-left: auto;
+    &:nth-child(2n - 1) {
+      .services__item-title {
+        &::after {
+          top: auto;
+          bottom: 80%;
+        }
+      }
     }
-    &-inner {
+    &:nth-child(2n) {
+      align-items: flex-end;
+    }
+    &-title {
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 10px;
       position: relative;
+
       &::before {
         content: "";
         position: absolute;
@@ -421,23 +436,6 @@
         height: 300vh;
         background-color: rgba(255, 255, 255, 0.1);
       }
-    }
-    &:nth-child(2n - 1) {
-      .services__item-inner {
-        &::after {
-          top: auto;
-          bottom: 359px;
-        }
-      }
-    }
-    &:nth-child(2n) {
-      align-items: flex-end;
-    }
-    &-title {
-      font-size: 24px;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin-bottom: 10px;
     }
     &-text {
       margin-bottom: 18px;
@@ -734,12 +732,12 @@
         margin-left: 23px;
       }
       &.active {
-        a{
+        a {
           text-shadow: 1px 0 0 #ffffff;
         }
       }
-      &:hover{
-        a{
+      &:hover {
+        a {
           text-shadow: 1px 0 0 #ffffff;
         }
       }

@@ -73,7 +73,11 @@
     }
   }
   .mission {
+    padding-top: 0;
     padding-bottom: 50px;
+    &__section-number {
+      top: 0;
+    }
     &__bg-block {
       &.stars-bg.yellow-bottom {
         left: 76%;
@@ -101,7 +105,7 @@
     }
     &__info {
       flex-wrap: wrap;
-      justify-content: center;
+      padding: 0 25px;
       &-item {
         width: 240px;
         height: 230px;
@@ -116,9 +120,72 @@
   .container {
     max-width: calc(100% - 90px);
   }
-  .services{
+  .services {
     border-top-left-radius: 175% 47%;
     border-top-right-radius: 175% 47%;
+    &__shadowtitle{
+      left: 25%;
+    }
+    &__section-number {
+      top: 10%;
+    }
+    &__row {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 50px;
+    }
+    &__item {
+      margin-left: 0;
+      margin: 0 70px;
+      &:nth-child(2n - 1) {
+        .services__item-title {
+          &::after {
+            top: 5px;
+            left: -22px;
+          }
+        }
+      }
+      &:nth-child(1n) {
+        align-items: flex-start;
+      }
+      &:first-child {
+        .services__item-title {
+          &::after {
+            top: auto;
+            bottom: 80%;
+          }
+        }
+      }
+      &:nth-child(2) {
+        .services__item-title {
+          &::after {
+            top: auto;
+            bottom: 80%;
+          }
+        }
+      }
+    }
+    &__crowd-box {
+      &.box1 {
+        left: -21%;
+        bottom: 14%;
+      }
+      &.box2 {
+        right: -16%;
+        top: 10%;
+      }
+    }
+  }
+}
+
+@media (max-width: 925px) {
+  .mission__info-item {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .services__item{
+    margin-right: 30px;
+    margin-left: 30px;
   }
 }
 
