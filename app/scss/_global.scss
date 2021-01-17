@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -16,7 +17,7 @@ body {
   // overflow-x: hidden;
   
 }
-.wrapper{
+.wrapper, .cases-page__wrapper{
   background-color: #050f10;
   height: 100%;
   position: relative;
@@ -51,7 +52,7 @@ a {
     display: none;
   }
 }
-.animate__animated{
+.animate__animated.bg-box{
   --animate-duration: 5s;
 }
 .global-subtitle {

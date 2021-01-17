@@ -34,13 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //   }
   // });
 
-  window.addEventListener(
-    `resize`,
-    (event) => {
-      // some code
-    },
-    false
-  );
+  
 
   const arrangeArrows = () => {
     arrowsDown.forEach((arrow, i) => {
@@ -95,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menuBox.classList.remove("out");
     menuBox.classList.add("in");
     menuBtn.style.cssText = "position: relative; z-index: 9999;";
-    if (window.innerWidth >= 1024) {
+    if (window.innerWidth >= 1024 && !(document.querySelector('.cases-page__wrapper'))) {
       mainInner.style.paddingRight = `
       ${
         parseFloat(window.getComputedStyle(menuBox).width) -
@@ -107,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   menuBtn.addEventListener("click", () => {
-    if (menuBox.classList.contains("out")) {
+    if (menuBox.classList.contains("out") && !(document.querySelector('.cases-page__wrapper'))w) {
       menuIn();
     } else {
       menuOut();

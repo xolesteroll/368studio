@@ -2,6 +2,54 @@
   .certificates .slick-list.draggable {
     margin-right: -125px;
   }
+  .cases-page__wrapper {
+    .main {
+      background-size: 165%;
+      .down-arrow {
+        top: 25%;
+      }
+      .crowd.bg-box {
+        display: none;
+      }
+      &__info {
+        flex-direction: column;
+        align-items: baseline;
+      }
+      &__title-box {
+        margin-bottom: 75px;
+      }
+      &-cases {
+        padding-bottom: 50px;
+        &__inner {
+          row-gap: 25px;
+        }
+        &__item {
+          max-width: 305px;
+          &-title {
+            font-size: 18px;
+            margin-bottom: 8px;
+          }
+          &-text {
+            font-size: 14px;
+          }
+        }
+        &__image-box {
+          img {
+            position: absolute;
+            &:first-child {
+              left: 25px;
+              top: 15px;
+              width: 80px;
+            }
+            &:last-child {
+              width: 164px;
+              bottom: 55px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media (max-width: 1024px) {
   .certificates .slick-list.draggable {
@@ -643,6 +691,65 @@
       margin-right: 40px;
     }
   }
+
+  //Styles fot CAses PAge
+
+  .cases-page__wrapper {
+    .main {
+      background-size: 350%;
+      .down-arrow {
+        top: auto;
+        bottom: -105px !important;
+      }
+      .crowd.bg-box {
+        display: none;
+      }
+      &__info {
+        flex-direction: column;
+        align-items: baseline;
+        padding-top: 0;
+        margin-bottom: 150px;
+        &-shadowtitle {
+          left: -73%;
+          top: 71%;
+        }
+      }
+      &__title-box {
+        margin-bottom: 35px;
+      }
+      &-cases {
+        padding-bottom: 50px;
+        &__inner {
+          row-gap: 25px;
+          column-gap: 25px;
+          justify-content: center;
+        }
+        &__item {
+          max-width: 305px;
+          &-title {
+            font-size: 18px;
+            margin-bottom: 8px;
+          }
+          &-text {
+            font-size: 14px;
+          }
+        }
+        &__image-box {
+          img {
+            position: absolute;
+            &:first-child {
+              left: 25px;
+              top: 15px;
+              width: 80px;
+            }
+            &:last-child {
+              right: 19%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 350px) {
@@ -651,6 +758,12 @@
   }
   .container {
     max-width: calc(100% - 50px);
+  }
+  .cases-page__wrapper .main-cases__image-box img:last-child {
+    position: absolute;
+    &:last-child {
+      right: 15%;
+    }
   }
 }
 

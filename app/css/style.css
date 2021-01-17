@@ -4152,6 +4152,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -4168,7 +4169,7 @@ body {
   color: #ffffff;
 }
 
-.wrapper {
+.wrapper, .cases-page__wrapper {
   background-color: #050f10;
   height: 100%;
   position: relative;
@@ -4209,7 +4210,7 @@ a {
   display: none;
 }
 
-.animate__animated {
+.animate__animated.bg-box {
   --animate-duration: 5s;
 }
 
@@ -5314,9 +5315,168 @@ button {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.cases-page__wrapper .main {
+  background-image: url(../images/cases-page-main-bg.png);
+  background-size: contain;
+  background-position: top;
+}
+
+.cases-page__wrapper .main .down-arrow {
+  top: 18%;
+}
+
+.cases-page__wrapper .main__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 990px;
+  width: 100%;
+  padding-top: 150px;
+  margin-bottom: 120px;
+  position: relative;
+}
+
+.cases-page__wrapper .main__info-text {
+  max-width: 500px;
+}
+
+.cases-page__wrapper .main__info-text p + p {
+  margin-top: 20px;
+}
+
+.cases-page__wrapper .main__info-shadowtitle {
+  width: auto;
+  left: -36%;
+  top: 11%;
+}
+
+.cases-page__wrapper .main__inner {
+  display: block;
+}
+
+.cases-page__wrapper .main-cases__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 130px;
+}
+
+.cases-page__wrapper .main-cases__item {
+  max-width: 525px;
+  padding-bottom: 50px;
+}
+
+.cases-page__wrapper .main-cases__item-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.cases-page__wrapper .main-cases__item-text {
+  text-align: justify;
+}
+
+.cases-page__wrapper .main-cases__image-box {
+  max-width: 425px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 30px 30px 25px;
+  border-radius: 10px;
+  min-height: 310px;
+  margin-bottom: 35px;
+  background-image: url(../images/case-shadow.png);
+  background-position: 0 85%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.cases-page__wrapper .main-cases__image-box img {
+  position: absolute;
+}
+
+.cases-page__wrapper .main-cases__image-box img:first-child {
+  left: 40px;
+  top: 30px;
+}
+
+.cases-page__wrapper .main-cases__image-box img:last-child {
+  right: 75px;
+  bottom: 25px;
+}
+
+.cases-page__wrapper .contact {
+  background-color: #0c1516;
+}
+
+.cases-page__wrapper .contact__form input {
+  background-color: #050f10;
+}
+
 @media (max-width: 1170px) {
   .certificates .slick-list.draggable {
     margin-right: -125px;
+  }
+  .cases-page__wrapper .main {
+    background-size: 165%;
+  }
+  .cases-page__wrapper .main .down-arrow {
+    top: 25%;
+  }
+  .cases-page__wrapper .main .crowd.bg-box {
+    display: none;
+  }
+  .cases-page__wrapper .main__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .cases-page__wrapper .main__title-box {
+    margin-bottom: 75px;
+  }
+  .cases-page__wrapper .main-cases {
+    padding-bottom: 50px;
+  }
+  .cases-page__wrapper .main-cases__inner {
+    row-gap: 25px;
+  }
+  .cases-page__wrapper .main-cases__item {
+    max-width: 305px;
+  }
+  .cases-page__wrapper .main-cases__item-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .cases-page__wrapper .main-cases__item-text {
+    font-size: 14px;
+  }
+  .cases-page__wrapper .main-cases__image-box img {
+    position: absolute;
+  }
+  .cases-page__wrapper .main-cases__image-box img:first-child {
+    left: 25px;
+    top: 15px;
+    width: 80px;
+  }
+  .cases-page__wrapper .main-cases__image-box img:last-child {
+    width: 164px;
+    bottom: 55px;
   }
 }
 
@@ -5981,6 +6141,67 @@ button {
   .footer__menu {
     margin-right: 40px;
   }
+  .cases-page__wrapper .main {
+    background-size: 350%;
+  }
+  .cases-page__wrapper .main .down-arrow {
+    top: auto;
+    bottom: -105px !important;
+  }
+  .cases-page__wrapper .main .crowd.bg-box {
+    display: none;
+  }
+  .cases-page__wrapper .main__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    padding-top: 0;
+    margin-bottom: 150px;
+  }
+  .cases-page__wrapper .main__info-shadowtitle {
+    left: -73%;
+    top: 71%;
+  }
+  .cases-page__wrapper .main__title-box {
+    margin-bottom: 35px;
+  }
+  .cases-page__wrapper .main-cases {
+    padding-bottom: 50px;
+  }
+  .cases-page__wrapper .main-cases__inner {
+    row-gap: 25px;
+    -webkit-column-gap: 25px;
+       -moz-column-gap: 25px;
+            column-gap: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cases-page__wrapper .main-cases__item {
+    max-width: 305px;
+  }
+  .cases-page__wrapper .main-cases__item-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .cases-page__wrapper .main-cases__item-text {
+    font-size: 14px;
+  }
+  .cases-page__wrapper .main-cases__image-box img {
+    position: absolute;
+  }
+  .cases-page__wrapper .main-cases__image-box img:first-child {
+    left: 25px;
+    top: 15px;
+    width: 80px;
+  }
+  .cases-page__wrapper .main-cases__image-box img:last-child {
+    right: 19%;
+  }
 }
 
 @media (max-width: 350px) {
@@ -5989,6 +6210,12 @@ button {
   }
   .container {
     max-width: calc(100% - 50px);
+  }
+  .cases-page__wrapper .main-cases__image-box img:last-child {
+    position: absolute;
+  }
+  .cases-page__wrapper .main-cases__image-box img:last-child:last-child {
+    right: 15%;
   }
 }
 

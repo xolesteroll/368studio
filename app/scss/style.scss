@@ -2,6 +2,8 @@
 @import "fonts";
 @import "global";
 
+// Home page / Total styles
+
 .header {
   position: absolute;
   top: 0;
@@ -581,7 +583,7 @@
   background-color: rgba(#0c1516, 0.8);
   padding: 100px 0 100px;
   position: relative;
-  .down-arrow{
+  .down-arrow {
     display: none;
   }
   &__title-box {
@@ -785,6 +787,97 @@
     font-size: 12px;
     font-weight: 400;
     color: rgba(#ffffff, 0.5);
+  }
+}
+
+// Cases Page styles
+
+.cases-page__wrapper {
+  .main {
+    background-image: url(../images/cases-page-main-bg.png);
+    background-size: contain;
+    background-position: top;
+    .down-arrow{
+      top: 18%;
+    }
+    &__title-box {
+    }
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 990px;
+      width: 100%;
+      padding-top: 150px;
+      margin-bottom: 120px;
+      position: relative;
+      &-text {
+        max-width: 500px;
+        p + p {
+          margin-top: 20px;
+        }
+      }
+      &-shadowtitle {
+        width: auto;
+        left: -36%;
+        top: 11%;
+      }
+    }
+    &__inner {
+      display: block;
+    }
+    &-cases {
+      &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 130px;
+      }
+      &__item {
+        max-width: 525px;  
+        padding-bottom: 50px;  
+        &-title{
+          font-size: 24px;
+          margin-bottom: 8px;
+        }
+        &-text{
+          text-align: justify;
+        }
+      }
+      &__image-box {
+        max-width: 425px;
+        background-color: rgba(#000, 0.2);
+        padding: 30px 30px 25px;
+        border-radius: 10px;
+        min-height: 310px;
+        margin-bottom: 35px;
+        background-image: url(../images/case-shadow.png);
+        background-position: 0 85%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        img {
+          position: absolute;
+          &:first-child{
+            left: 40px;
+            top: 30px;
+          }
+          &:last-child{
+            right: 75px;
+            bottom: 25px;
+          }
+        }
+      }
+    }
+  }
+  .contact{
+    background-color: #0c1516;
+    &__form{
+      input{
+        background-color: #050f10;
+      }
+    }
   }
 }
 
