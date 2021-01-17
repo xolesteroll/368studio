@@ -533,6 +533,7 @@
       min-height: 286px;
       border-radius: 10px;
       position: relative;
+      margin: 0 10px;
       &-overlay {
         display: inline-block;
         background-color: rgba(#0764aa, 0.8);
@@ -580,6 +581,9 @@
   background-color: rgba(#0c1516, 0.8);
   padding: 100px 0 100px;
   position: relative;
+  .down-arrow{
+    display: none;
+  }
   &__title-box {
     text-align: center;
     margin-bottom: 85px;

@@ -37,9 +37,12 @@ function images() {
 function scripts() {
   return src([
     "node_modules/jquery/dist/jquery.js",
+    "node_modules/wow.js/dist/wow.js",
     "node_modules/slick-carousel/slick/slick.js",
     "app/js/slider.js",
+    "app/js/animate.js",
     "app/js/main.js"
+
   ])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
@@ -54,8 +57,8 @@ function styles() {
     "app/scss/style.scss",
     "node_modules/normalize.css/normalize.css"
   ])
-    .pipe(scss({ outputStyle: "compressed" }))
-    .pipe(concat("style.min.css"))
+    .pipe(scss({ outputStyle: "expanded" }))
+    .pipe(concat("style.css"))
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 10 version"],
