@@ -70,9 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
           arrow.style.right = "30px";
         }
       } else {
-        arrow.style.right = "50%";
+        arrow.style.right = "41%";
         arrow.style.bottom = "5px";
-        arrow.style.transform = "translateX(50%)";
+        // arrow.style.transform = "translateX(50%)";
       }
     });
   };
