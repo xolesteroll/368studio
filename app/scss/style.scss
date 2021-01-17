@@ -797,7 +797,7 @@
     background-image: url(../images/cases-page-main-bg.png);
     background-size: contain;
     background-position: top;
-    .down-arrow{
+    .down-arrow {
       top: 18%;
     }
     &__title-box {
@@ -835,13 +835,13 @@
         row-gap: 130px;
       }
       &__item {
-        max-width: 525px;  
-        padding-bottom: 50px;  
-        &-title{
+        max-width: 525px;
+        padding-bottom: 50px;
+        &-title {
           font-size: 24px;
           margin-bottom: 8px;
         }
-        &-text{
+        &-text {
           text-align: justify;
         }
       }
@@ -859,11 +859,11 @@
         position: relative;
         img {
           position: absolute;
-          &:first-child{
+          &:first-child {
             left: 40px;
             top: 30px;
           }
-          &:last-child{
+          &:last-child {
             right: 75px;
             bottom: 25px;
           }
@@ -871,13 +871,164 @@
       }
     }
   }
-  .contact{
+  .contact {
     background-color: #0c1516;
-    &__form{
-      input{
+    &__form {
+      input {
         background-color: #050f10;
       }
     }
+  }
+}
+
+// Case Page styles
+
+.case-page__wrapper {
+  .main {
+    background-image: url(../images/case-page-main-bg.png);
+    background-position: top;
+    background-size: 100%;
+    &__inner {
+      display: block;
+    }
+    &__info {
+      padding-top: 250px;
+    }
+  }
+  .mission {
+    .mission__bg-block.crowd-bg {
+      left: auto;
+      right: 0;
+    }
+    padding-top: 0;
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
+    &__info {
+      max-width: 890px;
+      column-gap: 45px;
+      row-gap: 60px;
+      flex-wrap: wrap;
+      &-item {
+        max-width: 265px;
+        width: 100%;
+        min-height: 0;
+        height: 200px;
+        padding: 65px 30px 65px 35px;
+        margin: 0;
+        background-color: transparent;
+        border: 1px solid rgba(#eaedf1, 0.1);
+      }
+      &-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: $blue;
+        margin-bottom: 0;
+      }
+      &-line {
+        top: auto;
+        bottom: 40px;
+      }
+    }
+    &__aside {
+      max-width: 255px;
+      width: 100%;
+      padding: 40px 35px 10px;
+      background-color: rgba(#ffffff, 0.01);
+      border-radius: 20px;
+      &-title {
+        color: #eaedf1;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      &-subtitle__link {
+        display: inline-block;
+        font-size: 16px;
+        color: $blue;
+        margin-bottom: 25px;
+      }
+      &-about {
+        color: #eaedf1;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+      &-text {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(#b4daf0, 0.5);
+        p:first-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .tasks {
+    position: relative;
+    min-height: 100vh;
+    background-color: #0c1516;
+    overflow: hidden;
+    opacity: 0.8;
+    padding: 80px 0;
+    border-top-left-radius: 473% 285%;
+    border-top-right-radius: 473% 285%;
+    z-index: 1;
+    &__title-box {
+      text-align: center;
+      margin-bottom: 200px;
+    }
+    &__shadowtitle {
+      left: 28%;
+      top: -14%;
+    }
+    &-item {
+      background-color: #050f10;
+      width: 236px;
+      min-height: 160px;
+      border-radius: 10px;
+      position: relative;
+      &__title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #ffffff;
+        text-transform: uppercase;
+        min-height: 74px;
+        border-radius: 10px 10px 0 0;
+        padding: 20px 30px 5px;
+        background-color: $blue;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 1px;
+          top: 14%;
+          left: 0;
+          background-color: rgba(#ffffff, 0.5);
+        }
+      }
+      &__text {
+        min-height: 100px;
+        padding: 25px 30px 5px;
+        background-color: rgba(#fff, 0.01);
+      }
+    }
+    &__inner {
+      display: flex;
+      justify-content: center;
+      column-gap: 70px;
+      flex-wrap: wrap;
+      row-gap: 55px;
+    }
+  }
+  .contact__bg-block.crowd {
+    width: 362px;
+    height: 266px;
+    right: auto;
+    top: -158%;
+    left: -53px;
   }
 }
 

@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   menuBtn.addEventListener("click", () => {
-    if (menuBox.classList.contains("out") && !(document.querySelector('.cases-page__wrapper'))w) {
+    if (menuBox.classList.contains("out") && !(document.querySelector('.cases-page__wrapper'))) {
       menuIn();
     } else {
       menuOut();
