@@ -34,8 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //   }
   // });
 
-  
-
   const arrangeArrows = () => {
     arrowsDown.forEach((arrow, i) => {
       if (window.innerWidth >= 1500) {
@@ -77,6 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     window.addEventListener("resize", arrangeArrows);
     arrangeArrows();
+    swapImages('.gallery__slider-item');
+    swapImages('.decide__image-box');
   };
   const menuOut = () => {
     menuBox.classList.remove("in");
@@ -89,7 +89,10 @@ document.addEventListener("DOMContentLoaded", function () {
     menuBox.classList.remove("out");
     menuBox.classList.add("in");
     menuBtn.style.cssText = "position: relative; z-index: 9999;";
-    if (window.innerWidth >= 1024 && !(document.querySelector('.cases-page__wrapper'))) {
+    if (
+      window.innerWidth >= 1024 &&
+      !document.querySelector(".cases-page__wrapper")
+    ) {
       mainInner.style.paddingRight = `
       ${
         parseFloat(window.getComputedStyle(menuBox).width) -
@@ -100,8 +103,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+  const swapImages = (parentClass) => {
+    const parents = document.querySelectorAll(parentClass);
+    console.log(parents);
+    parents.forEach((parent) => {
+      console.log(parent[0]);
+      for (let i = 0; i < parent.children.length; i++) {
+        parent.children[i].addEventListener("mouseenter", () => {
+          const overlay = parent.children[i].querySelector(".img-overlay");
+          parent.children[i].style.zIndex = "10";
+          overlay.classList.remove("dark");
+          overlay.classList.add("lite");
+          if (i === 0) {
+            parent.children[1].style.zIndex = "0";
+            parent.children[1].children[0].classList.remove("lite");
+            parent.children[1].children[0].classList.add("dark");
+          } else {
+            parent.children[0].style.zIndex = "0";
+            parent.children[0].children[0].classList.remove("lite");
+            parent.children[0].children[0].classList.add("dark");
+          }
+        });
+      }
+    });
+  };
+
   menuBtn.addEventListener("click", () => {
-    if (menuBox.classList.contains("out") && !(document.querySelector('.cases-page__wrapper'))) {
+    if (
+      menuBox.classList.contains("out") &&
+      !document.querySelector(".cases-page__wrapper")
+    ) {
       menuIn();
     } else {
       menuOut();
