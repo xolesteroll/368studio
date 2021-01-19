@@ -148,6 +148,41 @@ a {
     left: 100%;
   }
 }
+.slick-dots {
+  display: flex;
+  margin-left: auto;
+  position: absolute;
+  bottom: -28px;
+  right: 0;
+  li {
+    width: 12px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    opacity: 0.05;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &.slick-active {
+      width: 23px;
+      height: 6px;
+      border-radius: 3px;
+      background-color: #0067b5;
+      opacity: 1;
+    }
+    & + li {
+      margin-left: 5px;
+    }
+    button {
+      display: none;
+      font-size: 0;
+      width: 0;
+      height: 0;
+    }
+  }
+}
 .img-overlay {
   position: absolute;
   width: 100%;
@@ -155,7 +190,7 @@ a {
   border-radius: 20px;
   transition: all 0.5s;
   &.dark {
-    background-color: rgba(#000000, 0.3);
+    background-color: rgba(#000000, 0.5);
   }
   &.lite {
     background-color: transparent;

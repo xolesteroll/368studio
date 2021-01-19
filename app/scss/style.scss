@@ -863,7 +863,7 @@
   .main {
     background-image: url(../images/case-page-main-bg.png);
     background-position: top;
-    background-size: 100%;
+    background-size: cover;
     &__inner {
       display: block;
     }
@@ -888,6 +888,15 @@
       column-gap: 45px;
       row-gap: 60px;
       flex-wrap: wrap;
+      .slick-slide {
+        padding-top: 35px;
+      }
+      &-text {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(#ffffff, 0.5);
+        display: none;
+      }
       &-item {
         max-width: 265px;
         width: 100%;
@@ -915,6 +924,7 @@
       padding: 40px 35px 10px;
       background-color: rgba(#ffffff, 0.01);
       border-radius: 20px;
+      margin-left: 15px;
       &-title {
         color: #eaedf1;
         font-size: 18px;
@@ -1075,13 +1085,18 @@
     &__img {
       position: absolute;
       transition: all 0.3s;
-
-      &:first-child {
+      width: 484px;
+      height: 295px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      &.one {
         left: 0;
         top: 0;
         z-index: 1;
       }
-      &:last-child {
+      &.two {
         bottom: 30%;
         right: 0;
         z-index: 0;
@@ -1125,6 +1140,12 @@
           height: 365px;
           position: relative;
           .gallery__slider-img {
+            width: 880px;
+            height: 278px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 10px;
             &:first-child {
               position: absolute;
               top: 0;
@@ -1145,6 +1166,7 @@
       padding: 70px 0 140px;
       position: relative;
       z-index: 1;
+      
       &__title {
         color: #eaedf1;
         font-size: 36px;
