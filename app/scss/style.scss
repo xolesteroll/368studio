@@ -1202,7 +1202,7 @@
     .down-arrow {
       right: 48% !important;
       bottom: auto;
-      top: 29%;
+      top: 32%;
     }
     .contact-page__icon-link {
       display: inline-block;
@@ -1228,6 +1228,10 @@
       display: flex;
       justify-content: space-between;
       max-width: 100%;
+      &__shadowtitle {
+        left: -6%;
+        top: 45%;
+      }
       &-links {
         width: 100%;
         &:first-child {
@@ -1287,35 +1291,35 @@
         }
       }
     }
-    &__social{
+    &__social {
       bottom: 60px;
       left: 50%;
       padding: 0 40px;
       transform: translateX(-50%);
-      &-line{
+      &-line {
         position: absolute;
         top: 50%;
         transform: translateY(10%);
-        &.left{
+        &.left {
           left: 0;
-          .line{
+          .line {
             right: 0;
           }
-        } 
-        &.right{
+        }
+        &.right {
           right: 0;
-          .line{
+          .line {
             left: 0;
           }
         }
-        .dot{
+        .dot {
           width: 4px;
           height: 4px;
           background-color: $blue;
           transform: rotate(45deg);
           position: absolute;
         }
-        .line{
+        .line {
           width: 1500px;
           height: 1px;
           background-color: rgba(#fff, 0.1);
@@ -1323,13 +1327,12 @@
           top: 1px;
         }
       }
-      &-list{
+      &-list {
         li + li {
           margin-left: 42px;
         }
       }
     }
-    
   }
 }
 
