@@ -41,6 +41,7 @@ function scripts() {
     "node_modules/slick-carousel/slick/slick.js",
     "app/js/slider.js",
     "app/js/animate.js",
+    // "app/js/scroll.js",
     "app/js/main.js"
 
   ])
